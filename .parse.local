@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "ImmlyExp": {
+      "applicationId": "vysdh19Gum7JGv4dv965WUKrrBCDicYrtGfb91dD"
+    },
+    "_default": {
+      "link": "ImmlyExp"
+    }
+  }
+}
