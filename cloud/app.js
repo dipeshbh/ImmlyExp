@@ -8,11 +8,15 @@ app.set('views', 'cloud/views');  // Specify the folder to find templates
 app.set('view engine', 'jade');    // Set the template engine
 app.use(express.bodyParser());    // Middleware for reading request body
 
+var xmlParserTest = require('cloud/xmlparsertest.js');
+
 // This is an example of hooking up a request handler with a specific request
 // path and HTTP verb using the Express routing API.
 app.get('/hello', function(req, res) {
   res.render('hello', { message: 'Congrats, you just set up your app!' });
 });
+
+app.get('/parse', xmlParserTest.index);
 
 // // Example reading from the request query string of an HTTP get request.
 // app.get('/test', function(req, res) {
