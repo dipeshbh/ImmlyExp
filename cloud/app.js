@@ -9,10 +9,13 @@ app.set('view engine', 'jade');    // Set the template engine
 app.use(express.bodyParser());    // Middleware for reading request body
 
 var xmlParserTest = require('cloud/xmlparsertest.js');
+app.use(xmlParserTest)
+console.log("xmlparsertest initialize" + xmlParserTest)
 
 // This is an example of hooking up a request handler with a specific request
 // path and HTTP verb using the Express routing API.
 app.get('/hello', function(req, res) {
+	console.log("xmlparsertest initialize" + xmlParserTest)
   res.render('hello', { message: 'Congrats, you just set up your app!' });
 });
 
